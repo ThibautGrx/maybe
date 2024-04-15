@@ -6,3 +6,19 @@ eur_checking:
   id: "123e4567-e89b-12d3-a456-426614174004"
 multi_currency:
   id: "123e4567-e89b-12d3-a456-426614174005"
+# == Schema Information
+#
+# Table name: account_depositories
+#
+#  id         :uuid             not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+checking:
+  id: "123e4567-e89b-12d3-a456-426614174000"
+savings:
+  id: "123e4567-e89b-12d3-a456-426614174001"
+eur_checking:
+  id: "123e4567-e89b-12d3-a456-426614174004"
+multi_currency:
+  id: "123e4567-e89b-12d3-a456-426614174005"

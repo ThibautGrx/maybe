@@ -1,3 +1,28 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                               :uuid             not null, primary key
+#  email                            :string
+#  first_name                       :string
+#  last_alerted_upgrade_commit_sha  :string
+#  last_login_at                    :datetime
+#  last_name                        :string
+#  last_prompted_upgrade_commit_sha :string
+#  password_digest                  :string
+#  created_at                       :datetime         not null
+#  updated_at                       :datetime         not null
+#  family_id                        :uuid             not null
+#
+# Indexes
+#
+#  index_users_on_email      (email) UNIQUE
+#  index_users_on_family_id  (family_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (family_id => families.id)
+#
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase

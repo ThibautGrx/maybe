@@ -11,3 +11,41 @@ family_member:
   last_name: Dylan
   email: jakobdylan@yahoo.com
   password_digest: <%= BCrypt::Password.create('password') %>
+# == Schema Information
+#
+# Table name: users
+#
+#  id                               :uuid             not null, primary key
+#  email                            :string
+#  first_name                       :string
+#  last_alerted_upgrade_commit_sha  :string
+#  last_login_at                    :datetime
+#  last_name                        :string
+#  last_prompted_upgrade_commit_sha :string
+#  password_digest                  :string
+#  created_at                       :datetime         not null
+#  updated_at                       :datetime         not null
+#  family_id                        :uuid             not null
+#
+# Indexes
+#
+#  index_users_on_email      (email) UNIQUE
+#  index_users_on_family_id  (family_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (family_id => families.id)
+#
+family_admin:
+  family: dylan_family
+  first_name: Bob
+  last_name: Dylan
+  email: bob@bobdylan.com
+  password_digest: <%= BCrypt::Password.create('password') %>
+
+family_member:
+  family: dylan_family
+  first_name: Jakob
+  last_name: Dylan
+  email: jakobdylan@yahoo.com
+  password_digest: <%= BCrypt::Password.create('password') %>

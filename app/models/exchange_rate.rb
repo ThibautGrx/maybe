@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: exchange_rates
+#
+#  id                 :uuid             not null, primary key
+#  base_currency      :string           not null
+#  converted_currency :string           not null
+#  date               :date
+#  rate               :decimal(, )
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+# Indexes
+#
+#  index_exchange_rates_on_base_converted_date_unique  (base_currency,converted_currency,date) UNIQUE
+#  index_exchange_rates_on_base_currency               (base_currency)
+#  index_exchange_rates_on_converted_currency          (converted_currency)
+#
 class ExchangeRate < ApplicationRecord
   include Provided
 

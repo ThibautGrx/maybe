@@ -1,3 +1,33 @@
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id               :uuid             not null, primary key
+#  accountable_type :string
+#  balance          :decimal(19, 4)   default(0.0)
+#  classification   :string
+#  currency         :string           default("USD")
+#  is_active        :boolean          default(TRUE), not null
+#  last_sync_date   :date
+#  name             :string
+#  status           :enum             default("ok"), not null
+#  subtype          :string
+#  sync_errors      :jsonb            not null
+#  sync_warnings    :jsonb            not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  accountable_id   :uuid
+#  family_id        :uuid             not null
+#
+# Indexes
+#
+#  index_accounts_on_accountable_type  (accountable_type)
+#  index_accounts_on_family_id         (family_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (family_id => families.id)
+#
 require "test_helper"
 require "csv"
 

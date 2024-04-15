@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: families
+#
+#  id         :uuid             not null, primary key
+#  currency   :string           default("USD")
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class Family < ApplicationRecord
   has_many :users, dependent: :destroy
   has_many :accounts, dependent: :destroy

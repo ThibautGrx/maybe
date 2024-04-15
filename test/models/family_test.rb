@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: families
+#
+#  id         :uuid             not null, primary key
+#  currency   :string           default("USD")
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require "test_helper"
 require "csv"
 

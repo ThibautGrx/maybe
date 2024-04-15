@@ -1,3 +1,23 @@
+# == Schema Information
+#
+# Table name: transaction_categories
+#
+#  id                :uuid             not null, primary key
+#  color             :string           default("#6172F3"), not null
+#  internal_category :string
+#  name              :string           not null
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  family_id         :uuid             not null
+#
+# Indexes
+#
+#  index_transaction_categories_on_family_id  (family_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (family_id => families.id)
+#
 require "test_helper"
 
 class Transaction::CategoryTest < ActiveSupport::TestCase

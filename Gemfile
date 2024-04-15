@@ -54,6 +54,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotaterb', '~> 4.7'
   gem "web-console"
   gem "hotwire-livereload"
   gem "ruby-lsp-rails"

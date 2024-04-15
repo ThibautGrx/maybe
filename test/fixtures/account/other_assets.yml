@@ -1,2 +1,12 @@
 one:
   id: "123e4567-e89b-12d3-a456-426614174002"
+# == Schema Information
+#
+# Table name: account_other_assets
+#
+#  id         :uuid             not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+one:
+  id: "123e4567-e89b-12d3-a456-426614174002"
